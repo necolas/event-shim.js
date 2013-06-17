@@ -1,0 +1,13 @@
+{
+    "name": "event-shim.js",
+    "description": "DOM Event shim for IE 8",
+    "version": "0.1.0",
+    "main": "event-shim.js",
+    "ignore": [
+        "test",
+        ".*",
+        "CHANGELOG.md",
+        "karma.conf.js",
+        "package.json"
+    ]
+}
