@@ -1,0 +1,29 @@
+{
+    "browser": true,
+    "esnext": true,
+    "bitwise": false,
+    "curly": false,
+    "eqeqeq": true,
+    "eqnull": true,
+    "immed": true,
+    "latedef": false,
+    "laxcomma": true,
+    "newcap": true,
+    "noarg": true,
+    "quotmark": "single",
+    "smarttabs": true,
+    "strict": true,
+    "trailing": true,
+    "undef": true,
+    "white": true,
+    "indent": 4,
+    "predef": [
+        "HTMLDocument",
+        "Window",
+        "describe",
+        "beforeEach",
+        "afterEach",
+        "it",
+        "expect"
+    ]
+}
