@@ -127,10 +127,12 @@
     var addEventListenerFn = function (type, listener) {
         var thisArg = this;
         var evt;
+        var wrapper;
+        var domWrapper;
 
         if (!listener) return;
 
-        var wrapper = function (e) {
+        wrapper = function (e) {
             e.currentTarget = thisArg;
             if (listener.handleEvent) {
                 listener.handleEvent(e);
@@ -144,7 +146,7 @@
         if (type === 'DOMContentLoaded') {
             // additional wrapper checks if the DOM is ready before calling the
             // wrapped callback
-            var domWrapper = function (e) {
+            domWrapper = function (e) {
                 if (document.readyState === 'complete') {
                     wrapper(e);
                 }
@@ -167,6 +169,7 @@
         }
         else {
             this.attachEvent('on' + type, wrapper);
+
             eventListeners.push({
                 object: this,
                 type: type,
@@ -185,12 +188,13 @@
      */
 
     var removeEventListenerFn = function (type, listener) {
-        var counter = 0;
+        var i = 0;
         var len = eventListeners.length;
         var eventListener;
 
-        while (counter < len) {
-            eventListener = eventListeners[counter];
+        while (i < len) {
+            eventListener = eventListeners[i];
+
             if (eventListener.object === this && eventListener.type === type && eventListener.listener === listener) {
                 if (type === 'DOMContentLoaded') {
                     this.detachEvent('onreadystatechange', eventListener.wrapper);
@@ -200,7 +204,8 @@
                 }
                 break;
             }
-            counter += 1;
+
+            i += 1;
         }
     };
 
