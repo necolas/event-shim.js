@@ -1,4 +1,4 @@
-/*! event-shim.js v0.1.0 - Nicolas Gallagher - MIT license */
+/*! event-shim.js v0.1.1 - Nicolas Gallagher - MIT license */
 
 (function () {
     'use strict';

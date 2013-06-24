@@ -1,6 +1,6 @@
 {
     "name": "event-shim.js",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "devDependencies": {
       "karma": "~0.8.5"
     }
