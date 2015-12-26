@@ -1,5 +1,7 @@
 # event-shim.js
 
+![unmaintained](http://img.shields.io/badge/status-unmaintained-red.png)
+
 A W3C DOM Event API shim for IE 8 (as far as possible).
 
 ## Installation
